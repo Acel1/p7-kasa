@@ -7,6 +7,12 @@ body {
   object,
   iframe,
   p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   blockquote,
   pre,
   a,
@@ -83,6 +89,7 @@ body {
     list-style: none;
     text-decoration: none;
     color: unset;
+    box-sizing: border-box;
   }
   /* HTML5 display-role reset for older browsers */
   article,

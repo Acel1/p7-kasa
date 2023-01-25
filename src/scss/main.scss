@@ -1,1 +1,8 @@
-@import "./layouts/nav";
+@import "./base/reset";
+@import "./base/index";
+
+@import "./components/thumb";
+
+@import "./layouts/header";
+
+@import "./pages/home";

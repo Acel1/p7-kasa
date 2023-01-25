@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./Home"
 import Logement from "./Logement"
 import Header from "../components/Header"
+import More from "./More"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Home />} />
+        <Route path='/more' element={<More />} />
         <Route path='/logement' element={<Logement />} />
       </Routes>
     </div>

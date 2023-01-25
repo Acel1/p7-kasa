@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__logo {
+  }
+
+  &__navbar {
+    display: flex;
+    position: absolute;
+    right: 0;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    /* or 34px */
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #ff6060;
+    cursor: pointer;
+
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+.logement {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+
+  &__carousel {
+    width: 100%;
+  }
+  &__header {
+    width: 100%;
+  }
+  &__tag-rate {
+    width: 100%;
+  }
+  &__dropdowns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

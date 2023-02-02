@@ -1,8 +1,14 @@
 @import "./base/reset";
 @import "./base/index";
 
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/functions";
+@import "./utils/media";
+
 @import "./components/thumb";
 @import "./components/dropdown";
+@import "./components/tag";
 
 @import "./layouts/header";
 

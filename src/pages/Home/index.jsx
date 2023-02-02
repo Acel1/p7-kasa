@@ -1,8 +1,11 @@
 import React from "react"
 
+import logements from "../../datas/logements.json"
 import Thumb from "../../components/Thumb"
 
 import background from "../../assets/IMG.png"
+import { Link } from "react-router-dom"
+// import { useParams } from "react-router"
 
 const Home = () => {
   return (
@@ -14,12 +17,14 @@ const Home = () => {
         </div>
       </section>
       <section className='home__section gallery'>
-        <Thumb />
-        <Thumb />
-        <Thumb />
-        <Thumb />
-        <Thumb />
-        <Thumb />
+        {logements.map((logement) => {
+          let id = logement.id
+          return (
+            <Link to={`/logement/${id}`}>
+              <Thumb title={logement.title} cover={logement.cover} />
+            </Link>
+          )
+        })}
       </section>
     </div>
   )

@@ -1,20 +1,107 @@
 .logement {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1240px;
   margin: auto;
 
   &__carousel {
     width: 100%;
+    height: 415px;
+    background: rgba(255, 155, 122, 0.84);
   }
+
   &__header {
     width: 100%;
+
+    @include flexbox($justifyContent: space-between, $alignItems: center);
+    margin: 24px 0;
+
+    &>div:last-child {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: flex-end;
+
+      &>div {
+        width: 100%;
+        @include flexbox($justifyContent: flex-end, $alignItems: center, $wrap: nowrap);
+
+      }
+
+      @include media-max("tablet-up") {
+        @include flexbox($justifyContent: space-between, $wrap: nowrap);
+        margin-top: 16px;
+
+
+        &>div {
+          width: auto;
+        }
+      }
+    }
+
+    @include media-max("tablet-up") {
+      @include flexbox($wrap: nowrap);
+
+
+      &>div {
+        width: 100%;
+      }
+    }
   }
-  &__tag-rate {
-    width: 100%;
+
+  &__title {
+
+    @include font(36px, 500, line-height(main));
+    /* or 51px */
+    @include flexbox($alignItems: flex-end);
+
+    color: color(prim);
   }
+
+  &__city {
+    @include font(18px, 500, line-height(main));
+    /* identical to box height, or 26px */
+    @include flexbox($alignItems: flex-end);
+
+    color: color(prim);
+  }
+
+  &__tags {
+    @include flexbox($alignItems: center);
+
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  &__host {
+    margin-bottom: 20px;
+  }
+
+  &__host-name {
+    @include font(18px, 500, line-height(main));
+    /* or 26px */
+    text-align: right;
+    margin-right: 10px;
+
+    color: color(prim);
+  }
+
+  &__pp {
+    width: 64px;
+    height: 64px;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+  }
+
+  &__rate {
+    min-width: 180px;
+  }
+
   &__dropdowns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox($justifyContent: space-between, $alignItems: center);
+    gap: 20px;
+
+    @include media-max("tablet-up") {
+      @include flexbox($justifyContent: center, $wrap: wrap);
+    }
   }
 }

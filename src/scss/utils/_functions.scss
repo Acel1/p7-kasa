@@ -1,0 +1,21 @@
+/** 
+Easier access to variables map 
+**/
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@function line-height($key) {
+  @if map-has-key($line-height, $key) {
+    @return map-get($line-height, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $line-height.";
+  @return null;
+}

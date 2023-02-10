@@ -2,21 +2,20 @@ import React from "react"
 import logements from "../../datas/logements.json"
 import Dropdown from "../../components/Dropdown"
 import star from "../../assets/star_rate-24px 3.png"
-
+import Carousel from "../../components/Carousel"
 import { useParams } from "react-router"
 
 const Logement = () => {
   let { id } = useParams()
 
-  let logement = logements.filter((logement) => logement.id === id)
+  let logement = logements.find((e) => e.id === id)
 
-  console.log(logement)
   return (
     <div className='logement'>
-      <div className='logement__carousel'></div>
+      <Carousel logement={logement} />
       <div className='logement__header'>
         <div>
-          <h2 className='logement__title'>Cozy loft on the Canal Saint-Martin</h2>
+          <h2 className='logement__title'>{logement.title}</h2>
           <h3 className='logement__city'>Paris, Île-de-France</h3>
           <ul className='logement__tags'>
             <li className='tag'>Cozy</li>

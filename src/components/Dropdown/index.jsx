@@ -6,7 +6,7 @@ const Dropdown = ({ title }) => {
   function click(e) {
     if (!isOpen) {
       e.currentTarget.parentNode.setAttribute("class", "dropdown dropdown--open")
-      const content = e.currentTarget.nextElementSibling
+      // const content = e.currentTarget.nextElementSibling
       // content.style.height = `${content.scrollHeight}px`
       // content.style.height = "249px"
       setIsOpen(true)
@@ -21,7 +21,7 @@ const Dropdown = ({ title }) => {
     <div className='dropdown'>
       <header className='dropdown__header' onClick={click}>
         <h3>{title}</h3>
-        <i class='fa-solid fa-chevron-up'></i>
+        <i className='fa-solid fa-chevron-up'></i>
       </header>
       <div className='dropdown__content'>
         <p className='dropdown__text'>

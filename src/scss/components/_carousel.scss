@@ -4,6 +4,7 @@
     height: 415px;
 
     &__arrow {
+        cursor: pointer;
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
@@ -19,8 +20,6 @@
     }
 
     &__list {
-
-
         position: relative;
     }
 
@@ -31,8 +30,6 @@
         width: 100%;
 
         img {
-
-
             object-fit: cover;
         }
 
@@ -41,9 +38,6 @@
             transition: transform ease-out 0.5s, opacity ease-in-out 0.7s;
 
             transform: translateY(0%);
-
-
-
         }
 
         &--hidden {
@@ -52,7 +46,6 @@
             transition: transform ease-out 0.5s, opacity ease-in-out 0.7s;
 
             opacity: 0;
-
         }
     }
 }

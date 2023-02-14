@@ -33,8 +33,8 @@ const Logement = () => {
         </div>
       </div>
       <div className='logement__dropdowns'>
-        <Dropdown title='Description' />
-        <Dropdown title='Équipements' />
+        <Dropdown title='Description' content={logement.description} />
+        <Dropdown title='Équipements' content={logement.equipments} />
       </div>
     </div>
   )

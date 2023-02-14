@@ -15,6 +15,7 @@ const Rating = ({ rating }) => {
   for (let i = 0; i < rest; i++) {
     blankStarArray.push(<img src={blankStar} alt='blank star' />)
   }
+
   return (
     <>
       {starArray}

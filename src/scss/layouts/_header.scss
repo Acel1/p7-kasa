@@ -2,7 +2,8 @@
   @include flexbox($justifyContent: space-between, $alignItems: center);
 
   width: 100%;
-  max-width: 1440px;
+  max-width: 1240px;
+  margin: auto;
   margin-bottom: 50px;
   padding: 40px 0;
   position: relative;
@@ -20,13 +21,16 @@
     /* or 34px */
 
     @include flexbox($alignItems: flex-end);
-
     text-align: right;
-    text-decoration-line: underline;
+
     color: color(prim);
     cursor: pointer;
 
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

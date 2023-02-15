@@ -12,7 +12,10 @@
 @import "./components/tag";
 
 @import "./layouts/header";
+@import './layouts/main';
+@import './layouts/footer';
 
 @import "./pages/home";
 @import "./pages/logement";
 @import "./pages/about";
+@import './pages/error'

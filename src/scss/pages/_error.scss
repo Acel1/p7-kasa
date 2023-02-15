@@ -1,0 +1,24 @@
+.error {
+    @include flexbox($direction: column, $alignItems: center);
+    color: color(prim);
+    position: relative;
+    height: 700px;
+
+    &__404 {
+        @include font(288px, 700, line-height(main));
+    }
+
+    &__oups {
+        @include font(36px, 500, line-height(main));
+
+    }
+
+    &__home {
+
+
+        @include font(18px, 500, line-height(main));
+        position: absolute;
+        bottom: 100px;
+        text-decoration: underline;
+    }
+}

@@ -27,7 +27,7 @@ const Dropdown = ({ title, content }) => {
         {Array.isArray(content) ? (
           <ul className='dropdown__list'>
             {content.map((item) => (
-              <li>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         ) : (
@@ -39,9 +39,3 @@ const Dropdown = ({ title, content }) => {
 }
 
 export default Dropdown
-//   <ul className='dropdown__list'>
-//       <li>aaaaaa</li>
-//       <li>bbbbbb</li>
-//       <li>cccccc</li>
-//       <li>dddddd</li>
-//     </ul>

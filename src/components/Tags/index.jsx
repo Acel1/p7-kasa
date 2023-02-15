@@ -3,8 +3,10 @@ import React from "react"
 const Tags = ({ tags }) => {
   return (
     <>
-      {tags.map((tag) => (
-        <li className='tag'>{tag}</li>
+      {tags.map((tag, index) => (
+        <li key={index} className='tag'>
+          {tag}
+        </li>
       ))}
     </>
   )

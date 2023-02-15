@@ -1,28 +1,23 @@
-import React from "react"
+import { Link } from "react-router-dom"
 
 import logements from "../../datas/logements.json"
 import Thumb from "../../components/Thumb"
 
-import background from "../../assets/IMG.png"
-import { Link } from "react-router-dom"
-// import { useParams } from "react-router"
+import banner from "../../assets/banner-home.png"
+import Banner from "../../components/Banner"
 
 const Home = () => {
   return (
     <div className='home'>
-      <section className='home__banner banner'>
-        <h2 className='banner__text'>Chez vous, partout et ailleurs</h2>
-        <div className='banner__bg'>
-          <img src={background} alt='bvb' />
-        </div>
-      </section>
+      <Banner banner={banner} title={<h2 className='banner__text'>Chez vous, partout et ailleurs</h2>} />
       <section className='home__section gallery'>
         {logements.map((logement) => {
-          let id = logement.id
           return (
-            <Link to={`/logement/${id}`}>
-              <Thumb title={logement.title} cover={logement.cover} />
-            </Link>
+            <div key={logement.id}>
+              <Link to={`/logements/${logement.id}`}>
+                <Thumb title={logement.title} cover={logement.cover} />
+              </Link>
+            </div>
           )
         })}
       </section>

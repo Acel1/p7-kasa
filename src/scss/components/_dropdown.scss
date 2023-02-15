@@ -1,11 +1,15 @@
 .dropdown {
   width: 100%;
-  max-width: 582px;
+
   min-width: 335px;
   position: relative;
 
+
   &--open {
+
     .dropdown__header {
+      z-index: 4;
+
       i {
         transform: rotate(0deg);
         transition: all ease-in-out 0.2s;
@@ -14,10 +18,12 @@
 
     & .dropdown__content {
       // min-height: 249px;
+      z-index: 3;
     }
 
     & .dropdown__list,
     .dropdown__text {
+
       transition: all ease-in-out 0.2s;
       // height: 249px;
       height: 100%;
@@ -26,6 +32,8 @@
   }
 
   &__header {
+    position: relative;
+    z-index: 2;
     background: color(prim);
     color: color(text-negative);
     border-radius: 5px;
@@ -46,10 +54,14 @@
   }
 
   &__content {
+    &::before {
+      // content: '';
+    }
+
     position: absolute;
     width: 100%;
     padding-top: 40px;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
     top: 10px;
     border-radius: 5px;

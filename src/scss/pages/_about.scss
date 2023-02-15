@@ -1,0 +1,6 @@
+.about {
+    &__dropdowns {
+        @include flexbox($direction: column, $alignItems: center);
+        gap: 30px;
+    }
+}

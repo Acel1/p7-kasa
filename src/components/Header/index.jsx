@@ -13,7 +13,7 @@ const Header = () => {
           Accueil
         </Link>
 
-        <Link className='header__link' to={"/more"}>
+        <Link className='header__link' to={"/about"}>
           A Propos
         </Link>
       </nav>

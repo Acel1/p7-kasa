@@ -100,6 +100,7 @@
     @include flexbox($justifyContent: space-between, $alignItems: center);
     gap: 20px;
 
+
     @include media-max("tablet-up") {
       @include flexbox($justifyContent: center, $wrap: wrap);
     }

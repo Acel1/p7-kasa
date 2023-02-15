@@ -10,10 +10,10 @@ const Rating = ({ rating }) => {
   let blankStarArray = []
 
   for (let i = 0; i < rate; i++) {
-    starArray.push(<img src={star} alt='star' />)
+    starArray.push(<img src={star} alt='star' key={star.toString + i} />)
   }
   for (let i = 0; i < rest; i++) {
-    blankStarArray.push(<img src={blankStar} alt='blank star' />)
+    blankStarArray.push(<img src={blankStar} alt='blank star' key={star.toString + i} />)
   }
 
   return (

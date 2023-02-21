@@ -6,11 +6,23 @@
 
     &__404 {
         @include font(288px, 700, line-height(main));
+
+        @include media-max("tablet-up") {
+            font-size: 180px;
+        }
+
+        @include media-max("phone-down") {
+            font-size: 100px;
+        }
     }
 
     &__oups {
         @include font(36px, 500, line-height(main));
+        text-align: center;
 
+        @include media-max("phone-down") {
+            font-size: 18px;
+        }
     }
 
     &__home {
@@ -20,5 +32,9 @@
         position: absolute;
         bottom: 100px;
         text-decoration: underline;
+
+        @include media-max("phone-down") {
+            font-size: 14px;
+        }
     }
 }

@@ -1,14 +1,28 @@
 .header {
   @include flexbox($justifyContent: space-between, $alignItems: center);
 
-  width: 100%;
+  .header__logo {}
+
+
+
+  // width: 100%;
   max-width: 1240px;
   margin: auto;
-  margin-bottom: 50px;
-  padding: 40px 0;
+  margin-bottom: 5em;
+  padding: 4em 2em;
   position: relative;
 
-  &__logo {}
+  &__logo {
+    img {
+
+
+      @include media-max("phone-down") {
+
+        width: 145px;
+
+      }
+    }
+  }
 
   &__navbar {
     @include flexbox();
@@ -17,7 +31,7 @@
   }
 
   &__link {
-    @include font(24px, 500, line-height(main));
+    @include font(2.5em, 500, line-height(main));
     /* or 34px */
 
     @include flexbox($alignItems: flex-end);
@@ -26,11 +40,24 @@
     color: color(prim);
     cursor: pointer;
 
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
 
     &:hover {
       text-decoration: underline;
     }
   }
+}
+
+
+@media screen and (max-width:425px) {
+
+
+  .header__link {
+    padding: 0.5em 0.6em;
+    margin: 0 0.4em;
+  }
+
+
+
 }

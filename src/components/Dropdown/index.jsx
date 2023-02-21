@@ -4,14 +4,15 @@ import { useState } from "react"
 const Dropdown = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false)
   function click(e) {
+    let hiddenContent = e.currentTarget.nextSibling
     if (!isOpen) {
-      e.currentTarget.parentNode.setAttribute("class", "dropdown dropdown--open")
-      // const content = e.currentTarget.nextElementSibling
-      // content.style.height = `${content.scrollHeight}px`
-      // content.style.height = "249px"
+      // e.currentTarget.parentNode.setAttribute("class", "dropdown dropdown--open")
+
+      hiddenContent.style.height = `${hiddenContent.scrollHeight}px`
       setIsOpen(true)
     } else {
-      e.currentTarget.parentNode.setAttribute("class", "dropdown")
+      // e.currentTarget.parentNode.setAttribute("class", "dropdown")
+      hiddenContent.style.height = 0
 
       setIsOpen(false)
     }

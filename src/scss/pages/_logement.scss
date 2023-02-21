@@ -11,45 +11,29 @@
 
   &__header {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 40px;
+    margin: 2.4em 0;
 
-    @include flexbox($justifyContent: space-between, $alignItems: center);
-    margin: 24px 0;
-
-    &>div:last-child {
-      display: flex;
-      flex-wrap: wrap-reverse;
-      justify-content: flex-end;
-
-      &>div {
-        width: 100%;
-        @include flexbox($justifyContent: flex-end, $alignItems: center, $wrap: nowrap);
-
-      }
-
-      @include media-max("tablet-up") {
-        @include flexbox($justifyContent: space-between, $wrap: nowrap);
-        margin-top: 16px;
-
-
-        &>div {
-          width: auto;
-        }
-      }
-    }
-
-    @include media-max("tablet-up") {
-      @include flexbox($wrap: nowrap);
-
-
-      &>div {
-        width: 100%;
-      }
+    @include media-max("phone-down") {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
     }
   }
 
   &__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 
-    @include font(36px, 500, line-height(main));
+    @include media-max("phone-down") {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__name {
+
+    @include font(3.6em, 500, line-height(main));
     /* or 51px */
     @include flexbox($alignItems: flex-end);
 
@@ -62,17 +46,38 @@
     @include flexbox($alignItems: flex-end);
 
     color: color(prim);
+
+    @include media-max("phone-down") {
+      font-size: 13px;
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
   }
 
   &__tags {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     @include flexbox($alignItems: center);
 
-    gap: 20px;
-    margin-top: 24px;
+    gap: 2em;
+    margin-top: 2.4em;
+
+    @include media-max("phone-down") {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
   }
 
   &__host {
-    margin-bottom: 20px;
+    @include flexbox($alignItems: flex-start, $justifyContent: flex-end);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    @include media-max("phone-down") {
+      @include flexbox($alignItems: center);
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
   }
 
   &__host-name {
@@ -82,25 +87,46 @@
     margin-right: 10px;
 
     color: color(prim);
+
+    @include media-max("phone-down") {
+      font-size: 13px;
+    }
   }
 
   &__pp {
     width: 64px;
     height: 64px;
     border-radius: 100px;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
+
+    @include media-max("phone-down") {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__rate {
-    min-width: 180px;
+    // min-width: 180px;
+    @include flexbox($justifyContent: flex-end);
+
+    @include media-max("phone-down") {
+      justify-content: flex-start;
+      align-items: center;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    @include media-max("phone-down") {
+      img {
+        width: 18px;
+      }
+
+    }
+
   }
 
   &__dropdowns {
-    @include flexbox($justifyContent: space-between, $alignItems: center);
+    @include flexbox($justifyContent: space-between);
     gap: 20px;
-
 
     @include media-max("tablet-up") {
       @include flexbox($justifyContent: center, $wrap: wrap);

@@ -8,11 +8,11 @@
     position: absolute;
     z-index: 3;
     bottom: 0;
-    padding: 20px;
+    padding: 2em;
     font-size: 18px;
     font-weight: 500;
     line-height: line-height(thumb);
-    letter-spacing: 0em;
+    letter-spacing: 0rem;
     text-align: left;
     color: color(text-negative);
   }
@@ -36,4 +36,17 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     }
   }
+}
+
+@media screen and (max-width:425px) {
+
+  .thumb {
+    width: 280px;
+    height: 280px;
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+
 }

@@ -3,12 +3,17 @@
 
     height: 415px;
 
+    @include media-max("phone-down") {
+        height: 300px;
+    }
+
     &__arrow {
         cursor: pointer;
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
         z-index: 1;
+        width: 10em;
 
         &--back {
             left: 5px;
@@ -31,6 +36,10 @@
 
         img {
             object-fit: cover;
+        }
+
+        @include media-max("phone-down") {
+            height: 300px;
         }
 
         &--active {

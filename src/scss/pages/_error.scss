@@ -1,8 +1,8 @@
 .error {
-    @include flexbox($direction: column, $alignItems: center);
-    color: color(prim);
     position: relative;
+    @include flexbox($direction: column, $alignItems: center);
     height: 700px;
+    color: color(prim);
 
     &__404 {
         @include font(288px, 700, line-height(main));
@@ -26,8 +26,6 @@
     }
 
     &__home {
-
-
         @include font(18px, 500, line-height(main));
         position: absolute;
         bottom: 100px;

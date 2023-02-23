@@ -1,11 +1,9 @@
 .footer {
-    // width: 100%;
+    @include flexbox($direction: column, $alignItems: center, $justifyContent: center);
     height: 209px;
     background: #000000;
     padding: 0 1em;
     margin-top: 5em;
-
-    @include flexbox($direction: column, $alignItems: center, $justifyContent: center);
 
     &__logo {
         margin-bottom: 3em;
@@ -16,8 +14,8 @@
     }
 
     &__text {
+        @include font(2.4em, 500, line-height(main));
         color: white;
-        @include font(2.4em, 500, line-height(main))
     }
 
 }

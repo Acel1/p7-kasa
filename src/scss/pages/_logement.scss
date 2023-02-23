@@ -32,19 +32,14 @@
   }
 
   &__name {
-
     @include font(3.6em, 500, line-height(main));
-    /* or 51px */
     @include flexbox($alignItems: flex-end);
-
     color: color(prim);
   }
 
   &__city {
     @include font(18px, 500, line-height(main));
-    /* identical to box height, or 26px */
     @include flexbox($alignItems: flex-end);
-
     color: color(prim);
 
     @include media-max("phone-down") {
@@ -58,7 +53,6 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     @include flexbox($alignItems: center);
-
     gap: 2em;
     margin-top: 2.4em;
 
@@ -82,10 +76,8 @@
 
   &__host-name {
     @include font(18px, 500, line-height(main));
-    /* or 26px */
     text-align: right;
     margin-right: 10px;
-
     color: color(prim);
 
     @include media-max("phone-down") {
@@ -105,7 +97,6 @@
   }
 
   &__rate {
-    // min-width: 180px;
     @include flexbox($justifyContent: flex-end);
 
     @include media-max("phone-down") {
@@ -113,15 +104,11 @@
       align-items: center;
       grid-column: 1 / 2;
       grid-row: 3 / 4;
-    }
 
-    @include media-max("phone-down") {
       img {
         width: 18px;
       }
-
     }
-
   }
 
   &__dropdowns {

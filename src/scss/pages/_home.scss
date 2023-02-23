@@ -11,18 +11,16 @@
 
   &__text {
     @include flexbox($alignItems: center, $justifyContent: center);
+    @include font(4.8em, 500, line-height(main));
     position: absolute;
     height: 100%;
     width: 100%;
-    // /* or 68px */
     padding: 0 20px;
     color: color(text-negative);
-    @include font(4.8em, 500, line-height(main));
   }
 
   &__bg {
     height: 100%;
-
 
     img {
       position: absolute;
@@ -49,19 +47,13 @@
 
 .gallery {
   @include flexbox($wrap: wrap, $justifyContent: space-around);
-  overflow: scroll;
-
-  // max-height: 829px;
   padding: 5em;
   gap: 5em 2em;
   background: color(bg-grey);
   border-radius: 25px;
-}
+  overflow: scroll;
 
-
-@media screen and (max-width:425px) {
-  .gallery {
+  @media screen and (max-width:425px) {
     padding: 5em 0;
   }
-
 }

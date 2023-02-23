@@ -1,10 +1,12 @@
-@import "./base/reset";
-@import "./base/index";
-
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/functions";
 @import "./utils/media";
+
+@import "./base/reset";
+@import "./base/index";
+
+
 
 @import './components/carousel';
 @import "./components/thumb";

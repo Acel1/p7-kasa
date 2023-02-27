@@ -23,4 +23,5 @@ Thumb.propTypes = {
   equipments: PropTypes.array,
   tags: PropTypes.array,
 }
+
 export default Thumb

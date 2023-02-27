@@ -1,8 +1,9 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import logo from "../../assets/logo.svg"
 
 const Header = () => {
+  const location = useLocation()
   return (
     <header className='header'>
       <Link to={"/"}>
@@ -12,11 +13,11 @@ const Header = () => {
       </Link>
 
       <nav className='header__navbar'>
-        <Link className='header__link' to={"/"}>
+        <Link className='header__link' to={"/"} style={location.pathname === "/" ? { textDecoration: "underline" } : null}>
           Accueil
         </Link>
 
-        <Link className='header__link' to={"/about"}>
+        <Link className='header__link' to={"/about"} style={location.pathname === "/about" ? { textDecoration: "underline" } : null}>
           A Propos
         </Link>
       </nav>

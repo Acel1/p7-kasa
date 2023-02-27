@@ -28,6 +28,9 @@ const Carousel = ({ logement }) => {
           )
         })}
       </ul>
+      <p className='carousel__number'>
+        {current + 1} / {pictures.length}
+      </p>
     </div>
   )
 }

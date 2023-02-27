@@ -1,11 +1,10 @@
 .tag {
   @include flexbox($justifyContent: center, $alignItems: center);
   @include font(14px, 500, line-height(main));
-  width: 100%;
-  min-width: 80px;
-  max-width: 115px;
+  // min-width: 80px;
   height: 25px;
   background: color(prim);
   border-radius: 10px;
   color: color(text-negative);
+  padding: 0 1em;
 }

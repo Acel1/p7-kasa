@@ -52,7 +52,7 @@
   &__tags {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    @include flexbox($alignItems: center);
+    @include flexbox($alignItems: center, $wrap: wrap);
     gap: 2em;
     margin-top: 2.4em;
 

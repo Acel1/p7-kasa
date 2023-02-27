@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom"
 
 import logements from "../../datas/logements.json"
-import Dropdown from "../../components/Dropdown"
-import Carousel from "../../components/Carousel"
 
 import Error from "../Error"
-import Tags from "../../components/Tags"
+
+import Dropdown from "../../components/Dropdown"
+import Carousel from "../../components/Carousel"
 import { Host } from "../../components/Host"
 import Rating from "../../components/Rating"
+import Tags from "../../components/Tags"
 
 const Logement = () => {
   const { id } = useParams()

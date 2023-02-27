@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 
 import logements from "../../datas/logements.json"
+
 import Thumb from "../../components/Thumb"
+import Banner from "../../components/Banner"
 
 import banner from "../../assets/banner-home.png"
-import Banner from "../../components/Banner"
 
 const Home = () => {
   return (
